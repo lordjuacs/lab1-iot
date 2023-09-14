@@ -18,12 +18,17 @@ void loop() {
   int scaledValue = map(sensorValue, 0, 1023, 0, maxValue);
 
   // Imprime el tiempo, valor A0 y valor en 4 bits en formato CSV
-  Serial.print(tiempo);
+  /*Serial.print(tiempo);
   Serial.print(",");
   Serial.print(sensorValue);
   Serial.print(",");
+  Serial.println(scaledValue);*/
+// Imprime los valores con etiquetas
+  Serial.print("Valor sensor A0: ");
+  Serial.print(sensorValue);
+  Serial.print(", Valor escalado: ");
   Serial.println(scaledValue);
 
-  // Espera un breve período de tiempo para visualizar los cambios
+  // delay de cambios
   delay(100);
 }
